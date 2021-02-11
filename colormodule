@@ -1,0 +1,52 @@
+
+// export class Color {
+//   name;
+//   background;
+//   description;
+//     constructor(name, background,description) {
+//       this.Name = name;
+//       this.Background = background;
+//       this.description=description;
+//     }
+//   render() {
+//     return (
+//       <View/>
+//     );
+//   }
+// }
+// //class normal (color aaray fadeya, 3 function)
+// //update //delete //add //function component //const bra component new class const color=new colr()
+
+// //
+
+import React, {useState, setState} from 'react';
+import {Text, View, TouchableOpacity} from 'react-native';
+
+const Color = (props) => {
+  return (
+    <View>
+      <TouchableOpacity
+        onPress={props.Press}
+        style={{
+          backgroundColor: props.color,
+          alignSelf: 'center',
+          width: '80%',
+          height: 40,
+          borderRadius: 5,
+          marginTop: 10,
+          shadowOpacity: 0.5,
+        }}>
+        <Text
+          style={{
+            alignSelf: 'center',
+            marginTop: 10,
+            fontSize: 16,
+            color: props.TextColor,
+          }}>
+          {props.name}
+        </Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+export default Color;
